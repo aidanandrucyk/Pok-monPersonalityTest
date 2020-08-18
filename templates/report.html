@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="box">
+    <h1>{{ description[0].upper() }}</h1>
+
+    <span class="wave"></span><img src={{sprite}} alt="Pokémon Image" id='pokemon_image'></span>
+
+    <h3> Pokémon Type: {{ description[1] }}</h3>
+    <p>ID Number: {{ pokemon.id }}</p>
+    <p>Base Experience: {{ pokemon.base_experience }}</p>
+    <p>Height: {{ pokemon.height }}</p>
+    <p>Weight: {{ pokemon.weight }}</p>
+    
+    
+    <h3> Personality: {{ type }}</h3>
+    <p> You are {{ description[2] }}</p>
+
+    <h5>Personality Visualized</h5>
+    <img src="/static/personality_graphs.png" alt="Personality Graphs" class="graph">
+    <p>Attitude (I to E): {{ personality['attitudes'] }}</p>
+    <p>Information (N to S): {{ personality['information'] }}</p>
+    <p>Decision-making (F to T): {{ personality['decisions'] }}</p>
+    <p>Lifestyle (P to J): {{ personality['lifestyle'] }}</p>
+    
+    <!-- Table Answers
+    <table border=".1">
+        <tr>
+            <th>Question</th>
+            <th>Effect</th>
+        </tr>
+        {% for key,value in result.items() %}
+        {% if key[0] == 'q' %}
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    -->
+</div>
+{% endblock %}

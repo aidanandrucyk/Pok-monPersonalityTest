@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="box">
+    <h3>Hi There!<span class="wave">👋🏼</span></h3>
+    <h4>Select one item from each drop down menu and click submit to see which Pokemon you most resemble!</h4>
+    <form action="" method='post'>
+                <p>
+                    {{form.username.label}} <br>
+                    {{form.username(size=30)}}
+                </p>
+                <p>
+                    {{form.email.label}} <br>
+                    {{form.email(size=30)}}
+                </p>
+
+                <p>
+                    {{form.q1.label}} <br>
+                    {{form.q1(size=1)}}
+                </p>
+                <p>
+                    {{form.q2.label}} <br>
+                    {{form.q2(size=1)}}
+                </p>
+                <p>
+                    {{form.q3.label}} <br>
+                    {{form.q3(size=1)}}
+                </p>
+                <p>
+                    {{form.q4.label}} <br>
+                    {{form.q4(size=1)}}
+                </p>
+
+        <p>{{form.submit()}}</p>
+    </form>
+</div>
+{% endblock %}
