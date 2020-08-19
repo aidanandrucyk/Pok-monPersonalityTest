@@ -1,4 +1,4 @@
-# PokemonPersonalityTest
+# Pokémon Personality Test
 
 
 **AUTHOR NOTES:**
