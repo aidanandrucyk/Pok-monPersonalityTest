@@ -22,7 +22,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # random key used to allow form submission
-app.config['SECRET_KEY'] = os.urandom(8)
+app.config['SECRET_KEY'] = os.urandom(12)
 
 # ensure that templates reload after each run
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -35,7 +35,7 @@ ENV = 'dev'
 # developer mode for database
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Python;26952?@localhost/dpokemon'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:[insert password here]@localhost/dpokemon'
 # production mode for database
 else:
     app.debug = True
@@ -51,14 +51,14 @@ db = SQLAlchemy(app)
 class Form(db.Model):
     __tablename__ = 'form' 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(200), unique=True)
-    email = db.Column(db.String(200), unique=True)
-    pokemon = db.Column(db.String(200), unique=True)
-    type = db.Column(db.String(200), unique=True)
-    attd = db.Column(db.Integer, unique=True)
-    info = db.Column(db.Integer, unique=True)
-    decn = db.Column(db.Integer, unique=True)
-    life = db.Column(db.Integer, unique=True)
+    name = db.Column(db.String(200), unique=False)
+    email = db.Column(db.String(200), unique=False)
+    pokemon = db.Column(db.String(200), unique=False)
+    type = db.Column(db.String(200), unique=False)
+    attd = db.Column(db.Integer, unique=False)
+    info = db.Column(db.Integer, unique=False)
+    decn = db.Column(db.Integer, unique=False)
+    life = db.Column(db.Integer, unique=False)
 
     def __init__(self, name, email, pokemon, type, attd, info, decn, life):
         self.name = name
