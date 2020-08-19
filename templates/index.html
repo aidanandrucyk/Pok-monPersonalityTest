@@ -2,7 +2,7 @@
 {% block content %}
 <div class="box">
     <h3>Hi There!<span class="wave">👋🏼</span></h3>
-    <h4>Select one item from each drop down menu and click submit to see which Pokemon you most resemble!</h4>
+    <h4>Select one item from each drop down menu and click submit to see which Pokemon you are most similar to!</h4>
     <form action="" method='post'>
                 <p>
                     {{form.username.label}} <br>
@@ -30,6 +30,43 @@
                     {{form.q4(size=1)}}
                 </p>
 
+
+
+                <p>
+                    {{form.q5.label}} <br>
+                    {{form.q5(size=1)}}
+                </p>
+                <p>
+                    {{form.q6.label}} <br>
+                    {{form.q6(size=1)}}
+                </p>
+                <p>
+                    {{form.q7.label}} <br>
+                    {{form.q7(size=1)}}
+                </p>
+                <p>
+                    {{form.q8.label}} <br>
+                    {{form.q8(size=1)}}
+                </p>
+
+
+                <p>
+                    {{form.q9.label}} <br>
+                    {{form.q9(size=1)}}
+                </p>
+                <p>
+                    {{form.q10.label}} <br>
+                    {{form.q10(size=1)}}
+                </p>
+                <p>
+                    {{form.q11.label}} <br>
+                    {{form.q11(size=1)}}
+                </p>
+                <p>
+                    {{form.q12.label}} <br>
+                    {{form.q12(size=1)}}
+                </p>
+        <br>
         <p>{{form.submit()}}</p>
     </form>
 </div>
