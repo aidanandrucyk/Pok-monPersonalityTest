@@ -3,7 +3,7 @@
 
 **AUTHOR NOTES:**
 * This is a project 100% done for fun dipping my toes into full stack web development
-* The project idea is actually inspired by [Buzzfeed](
+* The project idea is actually inspired by [BuzzFeed](
 https://www.buzzfeed.com/tag/which-character-are-you) style quizzes
 * Certain keys were removed for privacy so a clone without modifications will not result in a working application 
 
